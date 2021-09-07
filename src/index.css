@@ -1,0 +1,143 @@
+*,body{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FAFAFA;
+}
+button{
+    background-color: inherit;
+    cursor: pointer;
+    border: 0px;
+}
+.cancel{
+    padding:2px 5px;
+}
+input{
+    padding:4px;
+    margin: 5px 0px;
+}
+.add-something::before{
+    content: '+ ';
+    color:red;
+    font-size: 15px;
+}
+/* header */
+.header{
+    display:flex;
+    background-color: #DB4C3F;
+    padding: 10px;
+    justify-content: space-around;
+    color: white;
+    font-size: 25px;
+}
+.dark{
+    background-color: black;
+}
+.header .pizza-icon{
+    background-color:inherit;
+    color: inherit;
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.header div{
+    background-color: inherit;
+    color: inherit;
+    margin-right: 500px;
+}
+.container{
+    width: 70%;
+    display: flex;
+    margin: auto;
+}
+/* sidebar */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 15px;
+}
+.side-icons{
+    margin:10px;
+    cursor: pointer;  
+    width: max-content;
+  padding: 5px;
+  /* border: 2px solid black; */
+}
+.side-icon{
+    margin:17px 22px;
+    cursor: pointer;  
+    width: max-content;
+}
+.side-icon button{
+    padding: 5px;
+}
+.side-icon:hover{
+    background-color: white;
+}
+.side-icon:hover .trash-icon{
+    display: inline;
+}
+.trash-icon{
+    display: none;
+    /* margin-top: 2px; */
+}
+.projects-heading{
+    margin-left: 17px;
+    margin-top: 15px;
+}
+.side-icons:hover{
+    background-color: white;
+}
+.submit{
+    background-color: #DB4C3F;
+    padding:2px 5px;
+    color: white;
+    margin-right: 5px;
+    border: 2px solid black;
+}
+.add-project-btn{
+    display: block;
+}
+/* main */
+.main{
+    background-color: white;
+    min-height: 92.6vh;
+    width: 60%;
+    padding: 10px 20px;
+}
+h2{
+    text-transform:uppercase
+}
+.task-completed{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* margin-bottom: 15px; */
+}
+.task-list{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+.add-task{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+}
+.form-add-task{
+    width: 100%;
+}
+.form-add-task input{
+    display: block;
+    width: 100%;
+}
+.btns-and-select{
+    display: flex;
+    justify-content: space-between;
+}
