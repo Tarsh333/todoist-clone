@@ -30,14 +30,14 @@ const Main = () => {
                         // console.log(opened, task.project)
                         if (task.project === opened) {
                             return(
-                                <div className="task-list"><button className="task-completed" onClick={()=>{removeTask(task.id)}}></button>{task.title} {task.time} {task.project} </div>
+                                <div className="task-list"><button className="task-completed" onClick={()=>{removeTask(task.id)}}></button>{task.title}</div>
                             )
                         }
                     }) : tasks.map((task) => {
                         // console.log(opened, task.project)
                         if (task.time === opened) {
                             return(
-                                <div className="task-list"><button className="task-completed" onClick={()=>{removeTask(task.id)}}></button>{task.title} {task.time} {task.project} </div>
+                                <div className="task-list"><button className="task-completed" onClick={()=>{removeTask(task.id)}}></button>{task.title}</div>
                             )
                         }
                     })

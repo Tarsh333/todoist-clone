@@ -1,8 +1,24 @@
 import React, { useReducer } from 'react'
 import Reducer from './Reducer'
+const getLocalStorageTasks = () => {
+    let tasks = localStorage.getItem('tasks');
+    if (tasks) {
+      return (tasks = JSON.parse(localStorage.getItem('tasks')));
+    } else {
+      return [];
+    }
+  };
+  const getLocalStorageProjects = () => {
+      let projects = localStorage.getItem('projects');
+      if (projects) {
+        return (projects = JSON.parse(localStorage.getItem('projects')));
+      } else {
+        return ['daily','future','job'];
+      }
+    };
 const initialState={
-    tasks:[],
-    projects:['daily','future','job'],
+    tasks:getLocalStorageTasks(),
+    projects:getLocalStorageProjects(),
     opened:'inbox'
 }
 const AppContext=React.createContext()
@@ -30,7 +46,7 @@ const Context = ({children}) => {
             addTask,
             removeTask,
             addProject,
-            deleteProject
+            deleteProject,
         }
         }>
             {children}
